@@ -1,0 +1,21 @@
+{
+	"React tsx component": {
+		"prefix": "crtsx",
+		"body": [
+			"import React from 'react';",
+			"type Props = {",
+			"  children: JSX.Element | JSX.Element[],",
+			"  style?: React.CSSProperties,",
+			"};",
+			"const ${1:nameComponent} : React.FC<Props> = ({ style, children } : Props) => {",
+			"  return (",
+			"    <div style={style}>",
+			"    {children}",
+			"    </div>",
+			"  )",
+			"}",
+			"export default (${1:nameComponent});"
+		],
+		"description": "Creates a react typescrip component.",
+	}
+}
