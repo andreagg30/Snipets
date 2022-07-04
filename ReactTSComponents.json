@@ -1,4 +1,23 @@
 {
+	"Styled components file": {
+		"prefix": "sctsx",
+		"body": [
+			"import styled from 'styled-components';",
+			"",
+			"export interface ${1:nameComponent}Props {",
+			"  padding?: string;",
+			"}",
+			"",
+			"export const ${1:nameComponent} = styled.div<${1:nameComponent}Props>`",
+			"    background: ${props => props.theme.colors.black};",
+			"    padding: ${props => props.padding};",
+			"    &:hover {",
+			"        cursor: pointer;",
+			"    }",
+			"`;",
+		],
+		"description": "Creates a styled compoents template.",
+	},
 	"React tsx component": {
 		"prefix": "crtsx",
 		"body": [
