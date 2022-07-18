@@ -36,5 +36,26 @@
 			"export default (${1:nameComponent});"
 		],
 		"description": "Creates a react typescrip component.",
+	},
+	"New hook File": {
+		"prefix": "hrtsx",
+		"body": [
+			"import { useState } from 'react';",
+			"",
+			"const use${1:nameHook} = () => {",
+			"    const [open, setopen] = useState(false);",
+			"    const handleOpen = () => {",
+			"        setopen(!open);",
+			"    };",
+			"",
+			"    return {",
+			"        open,",
+			"        handleOpen,",
+			"        setopen,",
+			"    }",
+			"};",
+			"",
+			"export default use${1:nameHook};"
+		]
 	}
 }
