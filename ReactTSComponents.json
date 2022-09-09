@@ -14,9 +14,9 @@
 			"    &:hover {",
 			"        cursor: pointer;",
 			"    }",
-			"`;",
+			"`;"
 		],
-		"description": "Creates a styled compoents template.",
+		"description": "Creates a styled compoents template."
 	},
 	"React tsx component": {
 		"prefix": "crtsx",
@@ -35,7 +35,7 @@
 			"}",
 			"export default (${1:nameComponent});"
 		],
-		"description": "Creates a react typescrip component.",
+		"description": "Creates a react typescrip component."
 	},
 	"New hook File": {
 		"prefix": "hrtsx",
@@ -56,6 +56,14 @@
 			"};",
 			"",
 			"export default use${1:nameHook};"
+		]
+	},
+	"Arrow Function": {
+		"prefix": "farts",
+		"body": [
+			"const ${1:nameFunction} = () => {",
+			"",
+			"};"
 		]
 	}
 }
