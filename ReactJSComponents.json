@@ -1,0 +1,26 @@
+{
+	"Styled components file": {
+		"prefix": "sctsx",
+		"body": [
+			"import styled from 'styled-components';",
+			"",
+			"",
+			"export const ${1:nameComponent} = styled.div`",
+			"    background: ${props => props.theme.colors.black};",
+			"    padding: ${props => props.padding};",
+			"    &:hover {",
+			"        cursor: pointer;",
+			"    }",
+			"`;"
+		],
+		"description": "Creates a styled compoents template."
+	},
+	"Arrow Function": {
+		"prefix": "farts",
+		"body": [
+			"const ${1:nameFunction} = () => {",
+			"",
+			"};"
+		]
+	}
+}
