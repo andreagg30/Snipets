@@ -4,8 +4,11 @@
 		"body": [
 			"import styled from 'styled-components';",
 			"",
+			"export interface ${1:nameComponent}Props {",
+			"  padding?: string;",
+			"}",
 			"",
-			"export const ${1:nameComponent} = styled.div`",
+			"export const ${1:nameComponent} = styled.div<${1:nameComponent}Props>`",
 			"    background: ${props => props.theme.colors.black};",
 			"    padding: ${props => props.padding};",
 			"    &:hover {",
@@ -15,12 +18,69 @@
 		],
 		"description": "Creates a styled compoents template."
 	},
+	"React tsx component": {
+		"prefix": "crtsx",
+		"body": [
+			"import React from 'react';",
+			"interface Props {",
+			"  children: React.ReactNode;",
+			"  className?: string;",
+			"};",
+			"const ${1:nameComponent} : React.FC<Props> = ({ className, children } : Props) => {",
+			"  return (",
+			"    <div className={className}>",
+			"    {children}",
+			"    </div>",
+			"  )",
+			"}",
+			"export default (${1:nameComponent});"
+		],
+		"description": "Creates a react typescrip component."
+	},
+	"New hook File": {
+		"prefix": "hrtsx",
+		"body": [
+			"import { useState } from 'react';",
+			"",
+			"const use${1:nameHook} = () => {",
+			"    const [open, setopen] = useState(false);",
+			"    const handleOpen = () => {",
+			"        setopen(!open);",
+			"    };",
+			"",
+			"    return {",
+			"        open,",
+			"        handleOpen,",
+			"        setopen,",
+			"    }",
+			"};",
+			"",
+			"export default use${1:nameHook};"
+		]
+	},
 	"Arrow Function": {
 		"prefix": "farts",
 		"body": [
 			"const ${1:nameFunction} = () => {",
 			"",
 			"};"
+		]
+	},
+	"iconc": {
+		"prefix": "iconc",
+		"body": [
+			"export const ${1:nameFunction} = ({className} : Props) => (",
+			"<svg",
+			"xmlns=\"http://www.w3.org/2000/svg\"",
+			"width={30}",
+			"height={28}",
+			"viewBox=\"0 0 30 28\"",
+			"fill=\"black\"",
+			"className={className}",
+			">",
+			"$0",
+			"</svg>",
+			")"
 		]
 	}
 }
